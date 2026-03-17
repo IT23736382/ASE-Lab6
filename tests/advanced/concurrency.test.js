@@ -4,12 +4,9 @@ class AsyncInventory {
     }
 
     async reserve(qty) {
-        const currentStock = this.stock;
-
-        await new Promise(resolve => setTimeout(resolve, 10));
-
-        if (currentStock >= qty) {
-            this.stock = currentStock - qty;
+        if (this.stock >= qty) {
+            await new Promise(resolve => setTimeout(resolve, 10));
+            this.stock -= qty;
             return true;
         }
         return false;
