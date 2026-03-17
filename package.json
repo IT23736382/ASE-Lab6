@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "better-sqlite3": "^12.8.0",
+    "fast-check": "^4.6.0",
     "jest": "^30.3.0"
   }
 }
